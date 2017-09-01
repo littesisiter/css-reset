@@ -27,7 +27,7 @@
 
 /**********  根元素标签  开始**********/
 html{
-    font:14px/1.5 "Microsoft YaHei",sans-serif;
+    font:14px/1.5 "Microsoft YaHei";
         -ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%;
 }
@@ -108,7 +108,7 @@ address{
 }
 b,
 strong{
-    font-weight:bold;
+    font-weight:inherit;;
 }
 small{
     font-size:12px;
