@@ -28,8 +28,6 @@
 /**********  根元素标签  开始**********/
 html{
     font:14px/1.15 "Microsoft YaHei";
-        -ms-text-size-adjust:100%;
-    -webkit-text-size-adjust:100%;
 }
 body{
     position:relative;
@@ -60,7 +58,6 @@ strong,
 address,
 progress{
     display:inline-block;
-    vertical-align:baseline;
 }
 /**********  行内元素统一行块  结束**********/
 
@@ -111,7 +108,7 @@ strong{
     font-weight:inherit;
 }
 small{
-    font-size:12px;
+    font-size:inherit;
 }
 abbr[title]{
     border-bottom:none;
@@ -128,12 +125,6 @@ sup{
     position:relative;
     line-height:1;
     font-size:12px;
-}
-sup{
-    vertical-align:top;
-}
-sub{
-    vertical-align:bottom;
 }
 /**********  上标、下标标签  结束**********/
 
@@ -191,7 +182,8 @@ table{
     border-collapse:collapse;
     border-spacing:0;
 }
-th,td{
+th,
+td{
     padding:0;
     font-weight:normal;
 }
@@ -205,24 +197,33 @@ a{
     color:inherit;
     outline:none;
 }
-hr{
-    margin:0;
-    border:none;
-    height:0;
-    overflow:visible;
-}
 img{
     max-width:100%;
     max-height:100%;
     border:none;
     vertical-align:top;
 }
+hr{
+    margin:0;
+}
 /**********  链接、分割线、图片标签  结束**********/
 
 
 
-/**********  用自定义样式  开始**********/
-@mixin clearfix{
+/**********  常用用自定义样式  开始**********/
+@mixin levelVerticalCenter{
+    position:absolute;
+    left:50%;top:50%;
+    transform:translate(-50%, -50%);
+}
+@mixin textEllipsis{
+    display:inline-block;
+    max-width:100%;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+@mixin clearFix{
     &:after{
         display:block;
         height:0;
@@ -232,16 +233,8 @@ img{
         content:"";
     }
 }
-html{
-    .hidden{
-        display:none;
-    }
-    .disabled{
-        cursor:not-allowed !important;
-    }
-}
 .clearfix{
-    @include clearfix;
+    @include clearFix;
     zoom:1;
 }
 .fl{
@@ -250,4 +243,27 @@ html{
 .fr{
     float:right;
 }
-/**********  用自定义样式  结束**********/
+html{
+    // 根据项目实际需求定制默认字体颜色
+    color:#333;
+
+    // 隐藏元素
+    .hidden{
+        display:none;
+    }
+
+    // 手势标识不可点击
+    .disabled{
+        cursor:not-allowed !important;
+    }
+
+    // 对阿里字体图标稍作修改
+    .iconfont{
+        line-height:1;
+        vertical-align:middle;
+        font-size:inherit;
+        font-style:normal;
+        color:inherit;
+    }
+}
+/**********  常用用自定义样式  结束**********/
