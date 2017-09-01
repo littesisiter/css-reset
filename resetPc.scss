@@ -84,7 +84,13 @@ summary{
 
 
 /**********  标题标签  开始**********/
-h1,h2,h3,h4,h5,h6,p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
     margin:0;
     font-weight:normal;
 }
@@ -122,7 +128,6 @@ abbr[title]{
 /**********  上标、下标标签  开始**********/
 sub,
 sup{
-    position:relative;
     line-height:1;
     font-size:12px;
 }
@@ -145,14 +150,14 @@ textarea{
 /* 分割线 */
 button,
 select,
+input[type="Date"],
 input[type="file"],
 input[type="reset"],
+input[type="radio"],
+input[type="color"],
 input[type="submit"],
 input[type="button"],
-input[type="radio"],
-input[type="checkbox"],
-input[type="Date"],
-input[type="color"]{
+input[type="checkbox"]{
     cursor:pointer;
 }
 /* 分割线 */
@@ -166,11 +171,14 @@ blockquote{
 
 
 /**********  列表标签  开始**********/
-dl,dd{
+dl,
+dd{
     margin:0;
 }
-ol,ul{
-    margin:0;padding:0;
+ol,
+ul{
+    margin:0;
+    padding:0;
     list-style:none;
 }
 /**********  列表标签  结束**********/
@@ -217,7 +225,6 @@ hr{
     transform:translate(-50%, -50%);
 }
 @mixin textEllipsis{
-    display:inline-block;
     max-width:100%;
     white-space:nowrap;
     text-overflow:ellipsis;
@@ -235,6 +242,7 @@ hr{
 }
 .clearfix{
     @include clearFix;
+
     zoom:1;
 }
 .fl{
