@@ -8,7 +8,7 @@
 * 参考：https://ant.design/
 * 兼容性：IE8+（包括IE8）
 * Email:674059309@qq.com
-* www.qiaodaima.me
+* https://github.com/qiaodaima
 */
 
 
@@ -27,7 +27,7 @@
 
 /**********  根元素标签  开始**********/
 html{
-    font:14px/1.5 "Microsoft YaHei";
+    font:14px/1.15 "Microsoft YaHei";
         -ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%;
 }
@@ -108,7 +108,7 @@ address{
 }
 b,
 strong{
-    font-weight:inherit;;
+    font-weight:inherit;
 }
 small{
     font-size:12px;
@@ -222,19 +222,27 @@ img{
 
 
 /**********  用自定义样式  开始**********/
-html .hidden{display:none;}
-html .disabled{cursor:not-allowed !important;}
-/* 分割线 */
-.clearfix{
-    zoom:1;
+@mixin clearfix{
+    &:after{
+        display:block;
+        height:0;
+        clear:both;
+        visibility:hidden;
+        font-size:0;
+        content:"";
+    }
 }
-.clearfix:after{
-    display:block;
-    height:0;
-    clear:both;
-    visibility:hidden;
-    font-size:0;
-    content:"";
+html{
+    .hidden{
+        display:none;
+    }
+    .disabled{
+        cursor:not-allowed !important;
+    }
+}
+.clearfix{
+    @include clearfix;
+    zoom:1;
 }
 .fl{
     float:left;
