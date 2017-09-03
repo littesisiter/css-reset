@@ -64,19 +64,19 @@ progress{
 
 
 /**********  html5标签  开始**********/
-article,
+nav,
+main,
+menu,
 aside,
-details,
-figcaption,
 figure,
 footer,
 header,
 hgroup,
-main,
-menu,
-nav,
+article,
+details,
 section,
-summary{
+summary,
+figcaption{
     display:block;
 }
 /**********  html5标签  结束**********/
@@ -84,13 +84,13 @@ summary{
 
 
 /**********  标题标签  开始**********/
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p{
+h6{
     margin:0;
     font-weight:normal;
 }
@@ -254,6 +254,14 @@ hr{
 html{
     // 根据项目实际需求定制默认字体颜色
     color:#333;
+
+    // 根据项目实际需求，限制页面大小，防止变形
+    body{
+        min-width:1366px;
+        max-width:1920px;
+        margin:0 auto;
+        overflow-x:auto;
+    }
 
     // 隐藏元素
     .hidden{
