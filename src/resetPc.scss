@@ -14,10 +14,12 @@
 
 
 /**********  盒子模型  开始**********/
-*,
-*:before,
-*:after{
-    box-sizing:border-box;
+*{
+    &,
+    &:before,
+    &:after{
+        box-sizing:border-box;
+    }
 }
 /**********  盒子模型  结束**********/
 

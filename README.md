@@ -34,6 +34,6 @@ gulp default
  - `src` 为源码目录，使用 `sass` 编写
  - `dist` 为产出目录，`map` 是方便后期调试追踪，建议保留
  - `resetPc.css` 是 **PC端**重置样式表
- - `resetMobile.css` 是**移动端**重置样式表
+ - `resetMobile.css` 是**移动端**重置样式表，和**PC端重置样式表**几乎一致，
  - `common.css` 是项目中经常使用的一些自定义样式，可根据实际需求进行拷贝
  

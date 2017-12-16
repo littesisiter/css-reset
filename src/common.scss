@@ -1,4 +1,7 @@
-/**********  常用用自定义样式  开始**********/
+@charset "utf-8";
+
+
+
 @mixin levelVerticalCenter{
     position:absolute;
     left:50%;top:50%;
@@ -10,6 +13,8 @@
     text-overflow:ellipsis;
     overflow:hidden;
 }
+
+
 
 html{
     // 根据项目实际需求定制默认字体颜色
@@ -42,4 +47,3 @@ html{
         color:inherit;
     }
 }
-/**********  常用用自定义样式  结束**********/

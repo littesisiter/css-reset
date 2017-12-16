@@ -14,11 +14,13 @@
 
 
 /**********  盒子模型  开始**********/
-*,
-*:before,
-*:after{
-    box-sizing:border-box;
-    -webkit-tap-highlight-color:transparent;
+*{
+    &,
+    &:before,
+    &:after{
+        box-sizing:border-box;
+        -webkit-tap-highlight-color:transparent;
+    }
 }
 /**********  盒子模型  结束**********/
 
@@ -27,7 +29,6 @@
 /**********  根元素标签  开始**********/
 html{
     font:50px/1.5 sans-serif;
-    -webkit-text-size-adjust:100%;
 }
 body{
     position:relative;
