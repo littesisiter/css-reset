@@ -1,0 +1,28 @@
+html {
+  color: #333;
+}
+
+html body {
+  min-width: 1366px;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+html .hidden {
+  display: none;
+}
+
+html .disabled {
+  cursor: not-allowed !important;
+}
+
+html .iconfont {
+  line-height: 1;
+  vertical-align: middle;
+  font-size: inherit;
+  font-style: normal;
+  color: inherit;
+}
+
+/*# sourceMappingURL=map/common.css.map */
