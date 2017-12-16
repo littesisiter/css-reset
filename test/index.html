@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>重置样式表测试</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../dist/resetPc.css" rel="stylesheet">
+    <!-- <link href="../dist/resetMobile.css" rel="stylesheet"> -->
+    <link href="../dist/common.css" rel="stylesheet">
+    <style>
+      .main-wrap{padding:20px;}
+      .main-wrap .test-item{margin-top:20px;padding:15px;border:1px solid #ddd;}
+      .main-wrap .test-item:hover{border-color:red;}
+
+      table{width:100%;}
+      th,td{border:1px solid #ccc;}
+    </style>
+  </head>
+  <body>
+    <div class="main-wrap">
+      <div class="test-item">
+        <h1>标题测试</h1>
+        <h2>标题测试</h2>
+        <h3>标题测试</h3>
+        <h4>标题测试</h4>
+      </div>
+
+      <div class="test-item">
+        <table>
+          <caption>table title and/or explanatory text</caption>
+          <thead>
+            <tr>
+              <th>header</th>
+              <th>表头</th>
+              <th>表头</th>
+              <th>表头</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>data</td>
+              <td>内容</td>
+              <td>内容</td>
+              <td>内容</td>
+            </tr>
+            <tr>
+              <td>data</td>
+              <td>内容</td>
+              <td>内容</td>
+              <td>内容</td>
+            </tr>
+            <tr>
+              <td>data</td>
+              <td>内容</td>
+              <td>内容</td>
+              <td>内容</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="test-item">
+        <div>
+          文字测试，是否垂直居中，<span>我是一个标签</span> <span>我是一个标签</span>
+          <span>我是一个标签</span>
+        </div>
+        <div>
+          <a href="javascrpit:;">我是超链接</a>
+          <a href="javascrpit:;">我是超链接 <span>我是超链接里面的一个标签</span> </a>
+          <a href="javascrpit:;">我是超链接 <i>我是超链接里面的一个标签</i> </a>
+        </div>
+      </div>
+
+      <div class="test-item">
+        <input type="text" name="" value="" placeholder="哈哈哈">
+        <input type="text" disabled placeholder="哈哈哈">
+
+        <select name="">
+          <option value="">菜单菜单菜单</option>
+          <option value="">菜单</option>
+          <option value="">菜单</option>
+          <option value="">菜单</option>
+        </select>
+
+        <select name="" disabled>
+          <option value="">菜单菜单菜单</option>
+          <option value="">菜单</option>
+          <option value="">菜单</option>
+          <option value="">菜单</option>
+        </select>
+
+        <label>
+          <input type="checkbox">
+          <span>勾选我呀</span>
+        </label>
+
+        <label>
+          <input type="checkbox">
+          <span>勾选我呀</span>
+        </label>
+
+        <label>
+          <input type="radio" name="kk" value="" placeholder="呵呵">
+          <span>勾选我呀</span>
+        </label>
+        <label>
+          <input type="radio" name="kk" value="" placeholder="呵呵">
+          <span>勾选我呀</span>
+        </label>
+      </div>
+
+    </div>
+  </body>
+</html>

@@ -7,7 +7,7 @@
 * 参考：http://www.cnblogs.com/yizuierguo/archive/2009/07/15/1524106.html
 * 参考：https://ant.design/
 * 兼容性：IE8+（包括IE8）
-* Email:674059309@qq.com
+* Email:qiaodaima@qq.com
 * https://github.com/qiaodaima
 */
 
@@ -17,9 +17,7 @@
 *,
 *:before,
 *:after{
-    -webkit-box-sizing:border-box;
-       -moz-box-sizing:border-box;
-            box-sizing:border-box;
+    box-sizing:border-box;
 }
 /**********  盒子模型  结束**********/
 
@@ -27,7 +25,7 @@
 
 /**********  根元素标签  开始**********/
 html{
-    font:14px/1.15 "Microsoft YaHei";
+    font:14px/1.5 "Microsoft YaHei";
 }
 body{
     position:relative;
@@ -164,17 +162,17 @@ input[type="checkbox"]{
     cursor:pointer;
 }
 /* 分割线 */
+legend,
+fieldset,
+blockquote{
+    margin:0;padding:0;
+}
+/* 分割线 */
 input:disabled,
 button:disabled,
 select:disabled,
 textarea:disabled{
     cursor:not-allowed;
-}
-/* 分割线 */
-legend,
-fieldset,
-blockquote{
-    margin:0;padding:0;
 }
 /**********  表单标签  结束**********/
 
@@ -187,8 +185,7 @@ dd{
 }
 ol,
 ul{
-    margin:0;
-    padding:0;
+    margin:0;padding:0;
     list-style:none;
 }
 /**********  列表标签  结束**********/
@@ -227,19 +224,7 @@ hr{
 /**********  链接、分割线、图片标签  结束**********/
 
 
-
-/**********  常用用自定义样式  开始**********/
-@mixin levelVerticalCenter{
-    position:absolute;
-    left:50%;top:50%;
-    transform:translate(-50%, -50%);
-}
-@mixin textEllipsis{
-    max-width:100%;
-    white-space:nowrap;
-    text-overflow:ellipsis;
-    overflow:hidden;
-}
+/**********  浮动、清除浮动  开始**********/
 @mixin clearFix{
     &:after{
         display:block;
@@ -261,35 +246,4 @@ hr{
 .fr{
     float:right;
 }
-html{
-    // 根据项目实际需求定制默认字体颜色
-    color:#333;
-
-    // 根据项目实际需求，限制页面大小，防止页面排版变形
-    body{
-        min-width:1366px;
-        max-width:1920px;
-        margin:0 auto;
-        overflow-x:auto;
-    }
-
-    // 隐藏元素
-    .hidden{
-        display:none;
-    }
-
-    // 手势标识不可点击
-    .disabled{
-        cursor:not-allowed !important;
-    }
-
-    // 对阿里字体图标稍作修改
-    .iconfont{
-        line-height:1;
-        vertical-align:middle;
-        font-size:inherit;
-        font-style:normal;
-        color:inherit;
-    }
-}
-/**********  常用用自定义样式  结束**********/
+/**********  浮动、清除浮动  结束**********/

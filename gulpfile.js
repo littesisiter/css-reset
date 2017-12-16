@@ -23,8 +23,8 @@ gulp.task('sass', ['cleanDistFolder'], function() {
                     cascade: true,
                     remove: true
                }))
-               .pipe($.csso())
-               .pipe($.sourcemaps.write('./dist/'))
+               // .pipe($.csso())
+               .pipe($.sourcemaps.write('./map/'))
                .pipe(gulp.dest('./dist'))
                .pipe(browserSync.reload({stream:true}));
 });
@@ -33,20 +33,18 @@ gulp.task('cleanDistFolder', function(){
                .pipe($.clean());
 });
 gulp.watch('./src/*.scss', ['sass']);
-
+gulp.watch('./test/**/*').on('change', browserSync.reload);
 
 
 
 /**
-* 默认任务
-* 1.清空产出目录
-* 2.产出相关目录 这个是异步的，互不干扰
-* 3.启动静态服务器
+* 默认任务,编译 sass启动静态服务器
 */
 gulp.task('default', ['sass'], function(){
     return browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: './',
+            index: './test/index.html'
         }
     });
 });

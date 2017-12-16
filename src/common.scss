@@ -1,0 +1,45 @@
+/**********  常用用自定义样式  开始**********/
+@mixin levelVerticalCenter{
+    position:absolute;
+    left:50%;top:50%;
+    transform:translate(-50%, -50%);
+}
+@mixin textEllipsis{
+    max-width:100%;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+
+html{
+    // 根据项目实际需求定制默认字体颜色
+    color:#333;
+
+    // 根据项目实际需求，限制页面大小，防止页面排版变形
+    body{
+        min-width:1366px;
+        max-width:1920px;
+        margin:0 auto;
+        overflow-x:auto;
+    }
+
+    // 隐藏元素
+    .hidden{
+        display:none;
+    }
+
+    // 手势标识不可点击
+    .disabled{
+        cursor:not-allowed !important;
+    }
+
+    // 对阿里字体图标稍作修改
+    .iconfont{
+        line-height:1;
+        vertical-align:middle;
+        font-size:inherit;
+        font-style:normal;
+        color:inherit;
+    }
+}
+/**********  常用用自定义样式  结束**********/

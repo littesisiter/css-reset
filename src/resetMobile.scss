@@ -6,9 +6,9 @@
 * 参考：https://ant.design/
 * 由于设计稿的尺寸在重构的时候要除以2，
 * 因此这个样式表用50px为基准（刚好凑成除以100，方便计算）
-* 该样式表适用于设计稿尺寸为750
-* Email:674059309@qq.com
-* www.qiaodaima.me
+* 1rem == 50 px;
+* Email:qiaodaima@qq.com
+* https://github.com/qiaodaima
 */
 
 
@@ -17,8 +17,7 @@
 *,
 *:before,
 *:after{
-    -webkit-box-sizing:border-box;
-            box-sizing:border-box;
+    box-sizing:border-box;
     -webkit-tap-highlight-color:transparent;
 }
 /**********  盒子模型  结束**********/
@@ -50,36 +49,38 @@ abbr,
 span,
 code,
 time,
+label,
 input,
 audio,
 small,
 video,
 button,
+select,
 canvas,
 strong,
 address,
+textarea,
 progress{
     display:inline-block;
-    vertical-align:baseline;
 }
 /**********  行内元素统一行块  结束**********/
 
 
 
 /**********  html5标签  开始**********/
-article,
+nav,
+main,
+menu,
 aside,
-details,
-figcaption,
 figure,
 footer,
 header,
 hgroup,
-main,
-menu,
-nav,
+article,
+details,
 section,
-summary{
+summary,
+figcaption{
     display:block;
 }
 /**********  html5标签  结束**********/
@@ -87,7 +88,13 @@ summary{
 
 
 /**********  标题标签  开始**********/
-h1,h2,h3,h4,h5,h6,p{
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
     margin:0;
     font-weight:normal;
 }
@@ -108,10 +115,10 @@ address{
 }
 b,
 strong{
-    font-weight:bold;
+    font-weight:inherit;
 }
 small{
-    font-size:12px;
+    font-size:inherit;
 }
 abbr[title]{
     border-bottom:none;
@@ -124,15 +131,8 @@ abbr[title]{
 /**********  上标、下标标签  开始**********/
 sub,
 sup{
-    position:relative;
     line-height:1;
     font-size:12px;
-}
-sup{
-    vertical-align:top;
-}
-sub{
-    vertical-align:bottom;
 }
 /**********  上标、下标标签  结束**********/
 
@@ -144,8 +144,7 @@ button,
 select,
 option,
 textarea{
-    -webkit-appearance:none;
-            appearance:none;
+    appearance:none;
     margin:0;padding:0;
     vertical-align:middle;
     outline:none;
@@ -153,14 +152,10 @@ textarea{
     font:inherit;
 }
 /* 分割线 */
-fieldset{
-    margin:0;padding:0;
-}
-legend{
-    padding:0;
-}
+legend,
+fieldset,
 blockquote{
-    margin:0;
+    margin:0;padding:0;
 }
 /**********  表单标签  结束**********/
 
@@ -183,7 +178,8 @@ table{
     border-collapse:collapse;
     border-spacing:0;
 }
-th,td{
+th,
+td{
     padding:0;
     font-weight:normal;
 }
@@ -197,24 +193,13 @@ a{
     color:inherit;
     outline:none;
 }
-hr{
-    margin:0;
-    border:none;
-    height:0;
-    overflow:visible;
-}
 img{
     max-width:100%;
     max-height:100%;
     border:none;
     vertical-align:top;
 }
-/**********  链接、分割线、图片标签  结束**********/
-
-
-
-/**********  用自定义样式  开始**********/
-html .hidden{
-    display:none;
+hr{
+    margin:0;
 }
-/**********  用自定义样式  结束**********/
+/**********  链接、分割线、图片标签  结束**********/
