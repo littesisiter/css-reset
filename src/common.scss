@@ -1,12 +1,13 @@
 @charset "utf-8";
 
 
-
+// 水平垂直都居中
 @mixin levelVerticalCenter{
     position:absolute;
     left:50%;top:50%;
     transform:translate(-50%, -50%);
 }
+// 超出省略号
 @mixin textEllipsis{
     max-width:100%;
     white-space:nowrap;

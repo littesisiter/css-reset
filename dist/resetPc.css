@@ -10,15 +10,12 @@
 * Email:qiaodaima@qq.com
 * https://github.com/qiaodaima
 */
-/**********  盒子模型  开始**********/
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/**********  盒子模型  结束**********/
-/**********  根元素标签  开始**********/
 html {
   font: 14px/1.5 "Microsoft YaHei";
 }
@@ -29,7 +26,6 @@ body {
 }
 
 /**********  根元素标签  结束**********/
-/**********  行内元素统一行块  开始**********/
 a,
 b,
 i,
@@ -55,8 +51,6 @@ progress {
   display: inline-block;
 }
 
-/**********  行内元素统一行块  结束**********/
-/**********  html5标签  开始**********/
 nav,
 main,
 menu,
@@ -73,8 +67,6 @@ figcaption {
   display: block;
 }
 
-/**********  html5标签  结束**********/
-/**********  标题标签  开始**********/
 p,
 h1,
 h2,
@@ -90,8 +82,6 @@ pre {
   margin: 0;
 }
 
-/**********  标题标签  结束**********/
-/**********  强调标签  开始**********/
 i,
 em,
 dfn,
@@ -115,16 +105,12 @@ abbr[title] {
   cursor: pointer;
 }
 
-/**********  强调标签  结束**********/
-/**********  上标、下标标签  开始**********/
 sub,
 sup {
   line-height: 1;
   font-size: 12px;
 }
 
-/**********  上标、下标标签  结束**********/
-/**********  表单标签  开始**********/
 input,
 button,
 select,
@@ -168,8 +154,6 @@ textarea:disabled {
   cursor: not-allowed;
 }
 
-/**********  表单标签  结束**********/
-/**********  列表标签  开始**********/
 dl,
 dd {
   margin: 0;
@@ -182,8 +166,6 @@ ul {
   list-style: none;
 }
 
-/**********  列表标签  结束**********/
-/**********  表格标签  开始**********/
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -195,8 +177,6 @@ td {
   font-weight: normal;
 }
 
-/**********  表格标签  结束**********/
-/**********  链接、分割线、图片标签  开始**********/
 a {
   text-decoration: none;
   color: inherit;
@@ -214,8 +194,6 @@ hr {
   margin: 0;
 }
 
-/**********  链接、分割线、图片标签  结束**********/
-/**********  浮动、清除浮动  开始**********/
 .clearfix {
   zoom: 1;
 }
@@ -236,7 +214,5 @@ hr {
 .fr {
   float: right;
 }
-
-/**********  浮动、清除浮动  结束**********/
 
 /*# sourceMappingURL=map/resetPc.css.map */
